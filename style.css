@@ -82,14 +82,117 @@ table {
     background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
     position: absolute;
-    transform: scaleX(0.0);
+    transform: scaleX(0);
     transition: transform 225ms ease-in-out;
+    z-index: 1;
 }
 
 .make-vertical {
-    transform: rotate(90deg) scaleX(0.0);
+    transform: rotate(90deg) scaleX(0);
 }
 
 .position-relative {
     position: relative;
+}
+
+.game-over {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 2;
+    animation: zoomIn 225ms ease-in-out;
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.restart-btn {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    background-color: #1c0b7f;
+    z-index: 2;
+    width: 300px;
+    height: 100px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 60px;
+}
+
+.restart-btn:hover {
+    background-color: #332292;
+}
+
+
+
+@media (max-width: 490px) {
+    .player-panel {
+        font-size: 16px;
+    }
+
+    .player-panel img {
+        margin-right: 8px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .shape {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        left: 25px;
+        top: 25px;
+    }
+
+    tr {
+        width: 270px;
+    }
+    td {
+        width: 90px;
+        height: 90px;
+    }
+
+    .line-0 {
+        top: 40px !important;
+    }
+    
+    .line-1 {
+        top: 137px !important;
+    }
+
+    .line-2 {
+        top: 234px !important;
+    }
+
+    .line-3 {
+        top: 140px !important;
+        right: 98px !important;
+    }
+
+    .line-4 {
+        top: 140px !important;
+        right: 1px !important;
+    }
+
+    .line-5 {
+        top: 140px !important;
+        left: 97px !important;
+    }
+
+    .line-6 {
+        top: 138px !important;
+    }
+
+    .line-7 {
+        top: 138px !important;
+    }
 }

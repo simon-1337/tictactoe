@@ -9,6 +9,8 @@
     <script src="script.js"></script>
 </head>
 <body>
+    <img class="game-over d-none" id="game-over" src="./img/game-over.png">
+    <button class="restart-btn d-none" id="restart-btn" onclick="restart()">Restart</button>
     <div class="player-panel">
         <div id="player-1">
             <img src="./img/circle.png">Player 1
@@ -19,14 +21,14 @@
     </div>
 
     <div class="position-relative">
-        <div id="line-0" class="horizontal-line" style="top: 61px"></div>
-        <div id="line-1" class="horizontal-line" style="top: 201px"></div>
-        <div id="line-2" class="horizontal-line" style="top: 341px"></div>
-        <div id="line-3" class="horizontal-line make-vertical" style="top: 201px; right: 141px"></div>
-        <div id="line-4" class="horizontal-line make-vertical" style="top:201px"></div>
-        <div id="line-5" class="horizontal-line make-vertical" style="top: 201px; left: 139px"></div>
-        <div id="line-6" class="horizontal-line" style="top: 201px; transform: rotate(45deg) scaleX(0.0)"></div>
-        <div id="line-7" class="horizontal-line" style="top: 201px; transform: rotate(-45deg) scaleX(0.0)"></div>
+        <div id="line-0" class="horizontal-line line-0"></div>
+        <div id="line-1" class="horizontal-line line-1" style="top: 201px"></div>
+        <div id="line-2" class="horizontal-line line-2" style="top: 341px"></div>
+        <div id="line-3" class="horizontal-line line-3 make-vertical" style="top: 201px; right: 141px"></div>
+        <div id="line-4" class="horizontal-line line-4 make-vertical" style="top:201px"></div>
+        <div id="line-5" class="horizontal-line line-5 make-vertical" style="top: 201px; left: 139px"></div>
+        <div id="line-6" class="horizontal-line line-6" style="top: 201px; transform: rotate(45deg) scaleX(0)"></div>
+        <div id="line-7" class="horizontal-line line-7" style="top: 201px; transform: rotate(-45deg) scaleX(0)"></div>
         <table>
             <tr>
                 <td onclick="fillShape(0)">
